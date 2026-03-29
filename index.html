@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AcuaBio</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.section {
+    max-width: 1000px; /* 🔥 FIX ancho */
+    margin: auto;
+    padding: 0 20px;
+}
+.bg-gradient-blue {
+    background: linear-gradient(90deg, #1e4fa3 0%, #2d63c8 100%);
+}
+.bg-water {
+    background-image: linear-gradient(to top, rgba(255,255,255,0.9), rgba(255,255,255,0.6)), url('superficie-de-agua-cristalina-acuabio.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if(target){
+                target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        });
+    });
+});
+</script>
+
+</head>
+
+<body class="bg-white">
+
+<!-- NAV -->
+<nav class="bg-white shadow-sm sticky top-0 z-50">
+<div class="section flex justify-between items-center py-4">
+
+<img src="AcuaBio logo.jpg" class="h-10">
+
+<div class="hidden md:flex gap-8 text-sm font-semibold">
+<a href="#beneficios">Beneficios</a>
+<a href="#como">Cómo funciona</a>
+<a href="#soluciones">Soluciones</a>
+<a href="https://www.amazon.es" target="_blank">Productos</a>
+</div>
+
+<a href="https://wa.me/34722143874?text=Hola,%20estuve%20en%20su%20sitio%20web%20de%20AcuaBio%20y%20quiero%20más%20información.&source=nav-bar" 
+class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+WhatsApp
+</a>
+
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="bg-gray-50 py-12 md:py-16">
+<div class="section grid md:grid-cols-2 gap-8 items-center">
+
+<div>
+<h1 class="text-3xl md:text-4xl font-extrabold text-blue-700 mb-4">
+Agua limpia en tu hogar,<br>sin complicaciones
+</h1>
+
+<p class="text-gray-600 mb-6">
+Elimina el sabor a cloro, cuida tu familia y deja de gastar en botellas.
+</p>
+
+<ul class="space-y-2 mb-6 text-sm">
+<li>✔ Rápido y sin obras</li>
+<li>✔ Instalación inmediata</li>
+<li>✔ Para casas y apartamentos</li>
+<li>✔ +15 años de experiencia</li>
+</ul>
+
+<a href="#form" class="bg-green-500 text-white px-6 py-3 rounded font-bold inline-block">
+Quiero que me llamen
+</a>
+</div>
+
+<img src="familia-feliz-tomando-agua-purificada.png" class="rounded-lg w-full">
+
+</div>
+</section>
+
+<!-- BENEFICIOS + FORM -->
+<section id="beneficios" class="bg-gradient-blue text-white pt-16 pb-32 relative">
+<div class="section grid md:grid-cols-2 gap-10 items-start">
+
+<div>
+<h2 class="text-2xl font-semibold mb-6">Grandes beneficios para ti</h2>
+
+<ul class="space-y-4 text-sm">
+<li>✅ Agua lista para beber directamente del grifo</li>
+<li>✅ Elimina cloro, sedimentos y malos sabores</li>
+<li>✅ Ahorra dinero en botellas y garrafones</li>
+<li>✅ Más comodidad: Sin cargar agua nunca más</li>
+<li>✅ Cuida la salud de tu familia</li>
+</ul>
+</div>
+
+<div id="form" class="relative md:absolute md:right-[8%] md:top-12 w-full md:w-[380px]">
+
+<div class="bg-white rounded-xl shadow-2xl p-6 text-gray-700">
+
+<h3 class="text-blue-700 font-semibold text-center mb-5 text-lg">
+Déjanos tu WhatsApp y te contactamos
+</h3>
+
+<div class="grid grid-cols-2 gap-3 mb-3">
+<input placeholder="Nombre" class="border border-gray-200 p-3 rounded-lg text-sm">
+<input placeholder="Apellido" class="border border-gray-200 p-3 rounded-lg text-sm">
+</div>
+
+<input placeholder="Celular" class="border border-gray-200 p-3 rounded-lg text-sm w-full mb-3">
+<input placeholder="Email" class="border border-gray-200 p-3 rounded-lg text-sm w-full mb-5">
+
+<button class="w-full bg-blue-700 hover:bg-blue-800 text-white py-3 rounded-xl font-semibold">
+QUIERO QUE ME LLAMEN
+</button>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="como" class="pt-24 pb-28 text-center bg-water">
+<div class="section">
+
+<h2 class="text-xl md:text-2xl text-blue-700 font-semibold mb-10">
+Así de fácil es tener agua purificada
+</h2>
+
+<div class="flex flex-col md:flex-row justify-center items-center gap-6 text-sm">
+
+<div class="flex items-center gap-3">
+<div class="bg-blue-700 text-white w-8 h-8 flex items-center justify-center rounded-full font-bold">1</div>
+<p><b>Analizamos</b> tu necesidad (gratis)</p>
+</div>
+
+<div class="flex items-center gap-3">
+<div class="bg-blue-700 text-white w-8 h-8 flex items-center justify-center rounded-full font-bold">2</div>
+<p><b>Te recomendamos</b> el sistema ideal</p>
+</div>
+
+<div class="flex items-center gap-3">
+<div class="bg-blue-700 text-white w-8 h-8 flex items-center justify-center rounded-full font-bold">3</div>
+<p><b>Instala fácil en tu hogar</b> desde el primer día</p>
+</div>
+
+</div>
+
+<a href="#form" class="mt-10 inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded font-semibold">
+Quiero que me llamen
+</a>
+
+</div>
+</section>
+
+<!-- SOLUCIONES -->
+<section id="soluciones" class="py-14 bg-gray-100 text-center">
+<div class="section">
+
+<h2 class="text-2xl font-bold mb-10">Soluciones para tu hogar</h2>
+
+<div class="grid md:grid-cols-3 gap-6">
+
+<div class="bg-white p-4 rounded shadow">
+<img src="purificadores-a-base-de-ozono.png" class="mb-3 rounded">
+<h3 class="font-bold">Purificadores a base de ozono</h3>
+</div>
+
+<div class="bg-white p-4 rounded shadow">
+<img src="luz-ultravioleta.png" class="mb-3 rounded">
+<h3 class="font-bold">Luz ultravioleta</h3>
+</div>
+
+<div class="bg-white p-4 rounded shadow">
+<img src="Filtros-y-repuestos-para-agua-purificada.png" class="mb-3 rounded">
+<h3 class="font-bold">Filtros y repuestos</h3>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- TESTIMONIOS -->
+<section class="bg-gradient-blue text-white py-16 text-center">
+<div class="section">
+
+<h2 class="text-2xl font-bold mb-4">
+Más de 15 años ayudando hogares en tu ciudad
+</h2>
+
+<div class="mb-8 text-sm">
+<p>✔ Eliminación real de cloro y malos olores</p>
+<p>✔ Agua segura directamente del grifo</p>
+<p>✔ Productos de alta calidad</p>
+<p>✔ Resultados desde el primer día</p>
+<p>✔ Clientes satisfechos en toda tu ciudad</p>
+</div>
+
+<div class="grid md:grid-cols-2 gap-6">
+
+<div class="relative">
+<img src="pareja-sonriente-por-su-nueva-osmosis-inversa.jpg" class="rounded-xl w-full">
+<div class="absolute bottom-4 left-4 right-4 bg-blue-500/90 p-4 rounded text-sm italic">
+“Desde que instalamos el sistema, dejamos de comprar botellas. Total cambio.”
+</div>
+</div>
+
+<div class="relative">
+<img src="hombre-sonriente-por-su-nueva-osmosis-inversa.jpg" class="rounded-xl w-full">
+<div class="absolute bottom-4 left-4 right-4 bg-blue-500/90 p-4 rounded text-sm italic">
+“Excelente servicio e instalación rápida.”
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- AMAZON -->
+<section class="py-16 bg-gray-100 text-center">
+<div class="section">
+
+<h2 class="text-2xl font-bold mb-10">
+Top 3 purificadores recomendados
+</h2>
+
+<div class="grid md:grid-cols-3 gap-6">
+
+<div class="bg-white p-6 rounded shadow">
+<h3 class="font-bold mb-2">#1 Mejor opción</h3>
+<p class="text-sm mb-2">Alta calidad y mejor valoración</p>
+<p class="text-xs text-gray-500 mb-2">✔ +4.5⭐ en Amazon · ✔ Envío rápido</p>
+<p class="text-xs text-red-500 mb-3">🔥 Alta demanda</p>
+<img src="producto1.png" loading="lazy" class="mb-3 rounded">
+<a href="https://www.amazon.es" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded font-bold text-sm block">
+Ver precio en Amazon
+</a>
+</div>
+
+<div class="bg-white p-6 rounded shadow">
+<h3 class="font-bold mb-2">#2 Más vendido</h3>
+<p class="text-sm mb-2">Equilibrio calidad / precio</p>
+<p class="text-xs text-gray-500 mb-2">✔ +4.5⭐ en Amazon · ✔ Envío rápido</p>
+<p class="text-xs text-red-500 mb-3">🔥 Alta demanda</p>
+<img src="producto2.png" loading="lazy" class="mb-3 rounded">
+<a href="https://www.amazon.es" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded font-bold text-sm block">
+Ver precio en Amazon
+</a>
+</div>
+
+<div class="bg-white p-6 rounded shadow">
+<h3 class="font-bold mb-2">#3 Económico</h3>
+<p class="text-sm mb-2">Opción más accesible</p>
+<p class="text-xs text-gray-500 mb-2">✔ +4.5⭐ en Amazon · ✔ Envío rápido</p>
+<p class="text-xs text-red-500 mb-3">🔥 Alta demanda</p>
+<img src="producto3.png" loading="lazy" class="mb-3 rounded">
+<a href="https://www.amazon.es" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded font-bold text-sm block">
+Ver precio en Amazon
+</a>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- CTA -->
+<section class="py-14 text-center bg-white">
+<div class="section">
+
+<h2 class="text-2xl font-bold mb-4">
+Recibe tu asesoría gratuita
+</h2>
+
+<p class="mb-6 text-gray-600">
+Te ayudamos a elegir tu sistema ideal sin compromiso
+</p>
+
+<a href="https://wa.me/34722143874?text=Hola,%20estuve%20en%20su%20sitio%20web%20de%20AcuaBio%20y%20quiero%20más%20información.&source=cta" 
+class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded font-semibold">
+Solicitar asesoría
+</a>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white py-8 text-center text-sm">
+<div class="section">
+<img src="AcuaBio logo.jpg" class="h-8 mx-auto mb-3">
+<p>© 2026 AcuaBio</p>
+</div>
+</footer>
+
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/34722143874?text=Hola,%20vi%20su%20sitio%20web%20de%20AcuaBio%20y%20quiero%20más%20información.&source=float-btn"
+target="_blank"
+class="fixed bottom-5 right-5 bg-green-500 hover:bg-green-600 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg z-50">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 fill-white" viewBox="0 0 24 24">
+<path d="M20.52 3.48A11.78 11.78 0 0012.06 0C5.47 0 .08 5.4.08 12c0 2.12.56 4.2 1.62 6.02L0 24l6.18-1.61A11.93 11.93 0 0012.06 24c6.59 0 11.98-5.4 11.98-12 0-3.2-1.25-6.2-3.52-8.52zM12.06 21.8c-1.8 0-3.55-.48-5.08-1.4l-.36-.22-3.67.96.98-3.58-.24-.37a9.83 9.83 0 01-1.5-5.2c0-5.43 4.44-9.85 9.87-9.85 2.64 0 5.12 1.02 6.99 2.9a9.8 9.8 0 012.88 6.95c0 5.43-4.43 9.86-9.87 9.86zm5.42-7.35c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15s-.77.98-.94 1.18c-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.8-1.68-2.1-.17-.3-.02-.47.13-.62.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.8.37s-1.05 1.03-1.05 2.5 1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.1 4.5.7.3 1.25.48 1.67.62.7.22 1.33.2 1.83.12.56-.08 1.78-.73 2.03-1.44.25-.7.25-1.3.17-1.44-.07-.13-.27-.2-.57-.35z"/>
+</svg>
+</a>
+
+<!-- STICKY MOBILE -->
+<div class="fixed bottom-0 left-0 w-full bg-white border-t p-3 flex justify-between md:hidden z-50">
+
+<a href="#form" class="bg-green-500 text-white px-4 py-2 rounded font-bold text-sm w-[48%] text-center">
+Llamar
+</a>
+
+<a href="https://wa.me/34722143874?text=Hola,%20vengo%20de%20su%20sitio%20web%20de%20AcuaBio%20y%20quiero%20más%20información.&source=sticky-mobile-btn"
+class="bg-blue-700 text-white px-4 py-2 rounded font-bold text-sm w-[48%] text-center">
+WhatsApp
+</a>
+
+</div>
+
+</body>
+</html>
