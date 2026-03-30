@@ -23,11 +23,15 @@ body {
     background: linear-gradient(90deg, #1e4fa3 0%, #2d63c8 100%);
 }
 .bg-water {
-    background-image: linear-gradient(to top, rgba(255,255,255,0.95), rgba(255,255,255,0.8)), url('superficie-de-agua-cristalina-acuabio.jpg');
+    background-image: url('superficie-de-agua-cristalina-acuabio.png');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
-    background-attachment: fixed;
+}
+    @media (min-width: 768px) {
+    .bg-water {
+        background-attachment: fixed;
+    }
 }
 </style>
 
@@ -53,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <nav class="bg-white shadow-sm sticky top-0 z-50">
     <div class="section flex justify-between items-center py-4">
 
-        <img src="logo-de-AcuaBio-en-colores-vibrantes.jpg" alt="logo-de-AcuaBio-en-colores-vibrantes" class="h-10 object-contain">
+        <img src="logo-de-AcuaBio-en-colores-vibrantes.png" alt="logo-de-AcuaBio-en-colores-vibrantes" class="h-10 object-contain">
 
         <div class="hidden md:flex gap-8 text-sm font-semibold">
             <a href="#beneficios" class="hover:text-blue-600 transition">Beneficios</a>
@@ -76,7 +80,11 @@ document.addEventListener("DOMContentLoaded", function() {
 <!-- HERO -->
 <section class="relative py-16 md:py-24 min-h-[420px] md:min-h-[520px] bg-gray-50 flex items-center">
     <div class="absolute inset-0">
-        <img src="familia-feliz-tomando-agua-purificada.png" alt="Familia feliz" class="w-full h-full object-cover object-[80%] md:object-right">
+        <img src="familia-feliz-tomando-agua-purificada.png"
+     alt="Familia feliz"
+     loading="eager"
+     fetchpriority="high"
+     class="w-full h-full object-cover object-[50%] md:object-right">
         <!-- Overlay PRO -->
         <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent"></div>
     </div>
@@ -96,8 +104,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Para casas y apartamentos</li>
                 <li class="flex items-center gap-2"><span class="text-green-500">✔</span> +15 años de experiencia</li>
             </ul>
-            <a href="#form" class="bg-blue-600 hover:bg-blue-700 transition text-white px-8 py-3.5 rounded-lg font-bold inline-block shadow-lg shadow-blue-200">
-                Quiero que me llamen
+            <a href="#form" class="bg-blue-600 hover:bg-blue-700 transition text-white px-8 py-3.5 rounded-lg font-bold inline-block shadow-lg shadow-blue-200 hover:scale-105 active:scale-95">
+                Hablar por WhatsApp ahora
             </a>
         </div>
     </div>
@@ -105,6 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <!-- BENEFICIOS + FORM -->
 <section id="beneficios" class="bg-gradient-blue text-white pt-20 pb-32 relative">
+    
     <div class="section grid md:grid-cols-2 gap-10 items-start">
         <div>
             <h2 class="text-3xl font-bold mb-8">Beneficios para tí</h2>
@@ -122,13 +131,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 <h3 class="text-blue-700 font-bold text-center mb-6 text-xl">
                     Déjanos tu WhatsApp y te contactamos
                 </h3>
+                <p class="text-green-600 text-center font-bold text-sm mb-2">Asesoría gratis hoy</p>
                 <div class="grid grid-cols-2 gap-3 mb-4">
                     <input placeholder="Nombre" class="border border-gray-200 p-3.5 rounded-xl text-sm bg-gray-50 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
                     <input placeholder="Apellido" class="border border-gray-200 p-3.5 rounded-xl text-sm bg-gray-50 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
                 </div>
                 <input placeholder="Celular" class="border border-gray-200 p-3.5 rounded-xl text-sm w-full mb-4 bg-gray-50 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
                 <input placeholder="Email" class="border border-gray-200 p-3.5 rounded-xl text-sm w-full mb-6 bg-gray-50 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
-                <button class="w-full bg-green-500 hover:bg-green-600 transition text-white py-4 rounded-xl font-bold text-lg shadow-md">
+                <button class="w-full bg-green-500 hover:bg-green-600 transition text-white py-4 rounded-xl font-bold text-lg shadow-md hover:scale-105 active:scale-95">
                     QUIERO QUE ME LLAMEN
                 </button>
             </div>
@@ -156,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <p><b>Instala fácil en tu hogar</b> desde el primer día</p>
             </div>
         </div>
-        <a href="#form" class="mt-12 inline-block bg-blue-600 hover:bg-blue-700 transition text-white px-8 py-3.5 rounded-lg font-bold shadow-lg shadow-blue-200">
+        <a href="#form" class="mt-12 inline-block bg-blue-600 hover:bg-blue-700 transition text-white px-8 py-3.5 rounded-lg font-bold shadow-lg shadow-blue-200 hover:scale-105 active:scale-95">
             Quiero que me llamen
         </a>
     </div>
@@ -272,7 +282,7 @@ document.addEventListener("DOMContentLoaded", function() {
         </p>
         <a href="https://wa.me/34722143874?text=Hola,%20estuve%20en%20su%20sitio%20web%20de%20AcuaBio%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n." 
            target="_blank"
-           class="bg-green-500 hover:bg-green-600 transition text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg">
+           class="bg-green-500 hover:bg-green-600 transition text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:scale-105 active:scale-95">
             Solicitar asesoría por WhatsApp
         </a>
     </div>
@@ -281,7 +291,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <!-- FOOTER -->
 <footer class="bg-gray-900 text-gray-400 py-12 text-center text-sm border-t border-gray-800">
     <div class="section">
-        <img src="logo-de-AcuaBio-en-colores-vibrantes.jpg" alt="logo-de-AcuaBio-en-colores-vibrantes" class="h-10 mx-auto mb-6 opacity-75 grayscale hover:grayscale-0 transition object-contain">
+        <img src="logo-de-AcuaBio-en-colores-vibrantes.png" alt="logo-de-AcuaBio-en-colores-vibrantes" class="h-10 mx-auto mb-6 opacity-75 grayscale hover:grayscale-0 transition object-contain">
         <p>© 2026 AcuaBio. Todos los derechos reservados.</p>
     </div>
 </footer>
