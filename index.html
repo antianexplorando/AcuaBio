@@ -22,17 +22,10 @@ body {
 .bg-gradient-blue {
     background: linear-gradient(90deg, #1e4fa3 0%, #2d63c8 100%);
 }
-.bg-water {
-    background-image: url('superficie-de-agua-cristalina-acuabio.png');
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
-    background-attachment: scroll;
-}
-    @media (min-width: 768px) {
-    .bg-water {
-        background-attachment: fixed;
-    }
+.section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px;
 }
 </style>
 
@@ -148,29 +141,50 @@ document.addEventListener("DOMContentLoaded", function() {
 </section>
 
 <!-- COMO FUNCIONA -->
-<section id="como" class="pt-28 pb-28 text-center bg-water">
+<section id="como" class="relative pt-28 pb-36 text-center bg-gray-50 overflow-hidden">
+
+    <!-- CONTENIDO -->
     <div class="section relative z-10">
+        
         <h2 class="text-2xl md:text-3xl text-blue-800 font-extrabold mb-12">
             Así de fácil es tener agua purificada
         </h2>
+
         <div class="flex flex-col md:flex-row justify-center items-start gap-8 text-base font-medium text-gray-800">
+
             <div class="flex flex-col items-center gap-4 bg-white/70 backdrop-blur p-6 rounded-2xl w-full shadow-sm">
                 <div class="bg-blue-600 text-white w-12 h-12 flex items-center justify-center rounded-full font-bold text-xl shadow-md">1</div>
                 <p><b>Analizamos</b> tu necesidad (gratis)</p>
             </div>
+
             <div class="flex flex-col items-center gap-4 bg-white/70 backdrop-blur p-6 rounded-2xl w-full shadow-sm">
                 <div class="bg-blue-600 text-white w-12 h-12 flex items-center justify-center rounded-full font-bold text-xl shadow-md">2</div>
                 <p><b>Te recomendamos</b> el sistema ideal</p>
             </div>
+
             <div class="flex flex-col items-center gap-4 bg-white/70 backdrop-blur p-6 rounded-2xl w-full shadow-sm">
                 <div class="bg-blue-600 text-white w-12 h-12 flex items-center justify-center rounded-full font-bold text-xl shadow-md">3</div>
                 <p><b>Instala fácil en tu hogar</b> desde el primer día</p>
             </div>
+
         </div>
+
         <a href="#form" class="mt-12 inline-block bg-blue-600 hover:bg-blue-700 transition text-white px-8 py-3.5 rounded-lg font-bold shadow-lg shadow-blue-200 hover:scale-105 active:scale-95">
             Quiero que me llamen
         </a>
+
     </div>
+
+    <!-- FADE SUAVE (opcional pero recomendado) -->
+    <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent z-10"></div>
+
+    <!-- AGUA FIJA ABAJO -->
+    <div class="absolute bottom-0 left-0 w-full pointer-events-none z-0">
+        <img src="superficie-de-agua-cristalina-acuabio.png"
+             alt="Agua"
+             class="w-full object-cover">
+    </div>
+
 </section>
 
 <!-- SOLUCIONES -->
